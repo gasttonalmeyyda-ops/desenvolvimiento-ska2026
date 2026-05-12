@@ -1,0 +1,87 @@
+.cuadrado {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  border-radius: 30px;
+}
+.manzana {
+  width: 250px;
+  height: 25px;
+  background-color: red;
+}
+.manzana:hover {
+  background-color: green;
+}
+
+@keyframes rodar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.animacao {
+  animation: caminhar 10s linear infinite;
+}
+
+@keyframes cor {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: gold;
+  }
+}
+@keyframes aumentar {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+.notif {
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes caminhar {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.teste{
+    width: 100%;
+}
+
+.menu {
+  animation: slideIn 0.3s ease-out;
+}
+
+.manzanazzz :hover {
+     width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    border-radius: 100%; 
+}
+   
+
+    @keyframes virarcirculo {
+    0%
+    border-radius: 0%;   
+    }
+    100%{border-radius: 50%; 
+
+    }
+}
+
+
