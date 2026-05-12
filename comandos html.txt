@@ -1,0 +1,15 @@
+<!-- Link abrindo em nova aba -->
+<a href="https://google.com" target="_blank">
+  Visitar Google
+</a>
+
+<div class="quadrado" id="meuPropriocodigo">
+    
+</div>
+
+<input type="email" >  
+<input type="password" >
+<input type="number" >
+<input type="date" >
+<input type="color" >
+<input type="checkbox" >
