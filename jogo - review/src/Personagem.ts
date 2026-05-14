@@ -34,6 +34,12 @@ export abstract class Personagem {
     this.jaUsouCura = true;
   }
 
+  public log(mensagem: string) {
+    console.log(mensagem);
+
+    document.getElementById("console")!.innerHTML += "<p>" + mensagem + "</p>";
+  }
+
   public getVida(): number {
     return this.vida;
   }
@@ -45,6 +51,10 @@ export abstract class Personagem {
   gerarAtaque(): number {
     let maximoAtk = 4;
     return Math.floor(Math.random() * maximoAtk);
+  }
+
+  getimg() {
+    return this.imagem;
   }
 
   verificarAtaque(ataque: number): number {

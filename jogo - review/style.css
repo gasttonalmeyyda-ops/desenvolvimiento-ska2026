@@ -6,8 +6,8 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana;
   padding: 20 px;
-  background: #1a1a2e;
-  color: #eee;
+  background: #e67a00;
+  color:#e47227;
   max-width: 900 px;
   margin: 50;
 }
@@ -19,6 +19,11 @@ h1 {
   letter-spacing: 2px;
   font-size: 36px;
 }
+
+img {
+    height: 275px;
+}
+
 .players {
   display: flex;
   justify-content: space-between;
@@ -40,11 +45,11 @@ h1 {
   text-transform: capitalize;
 }
 #mago {
-  color: #3498db;
+  color: #db5534;
   text-shadow: 0 0 8px
-    rgb(rgb(195, 212, 41), rgb(64, 194, 176), rgb(139, 139, 194));
+    rgb(rgb(41, 212, 84), rgb(64, 194, 176), rgb(139, 139, 194));
 }
-#assasino {
+#esparto {
   color: #e74c3c;
   text-shadow: 0 0 8px rgb(red, green, blue);
 }
@@ -55,11 +60,10 @@ h1 {
   height: 250px;
   padding: 10px;
   margin: 10px;
+  overflow: auto;
 
-  .linha {
-    display: inline-flex;
-  }
 }
+
 .health-bar {
 }
 
@@ -72,11 +76,8 @@ button{
     margin: auto;
 }
 
-.console{
-  
-    width: 90%;
-    height: 300px;
-    background-color: white;
-    DISPLAY: flex;
-    MARGIN: AUTO;
+.barraVida{
+    width: 85%;
+    height: 10px;
+    background-color: red;
 }
