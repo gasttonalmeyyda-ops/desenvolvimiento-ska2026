@@ -1,0 +1,75 @@
+export abstract class Personagem {
+  public nome: string = "Personagem";
+  protected vida: number = 0;
+  protected dano: number = 0;
+  protected regen: number = 0;
+  protected imagem: string = "";
+
+  private jaUsouCura: boolean = false;
+
+  constructor(
+    nome: string,
+    vida: number,
+    dano: number,
+    regen: number,
+    imagem: string,
+  ) {
+    this.imagem = imagem;
+    this.nome = nome;
+    this.vida = vida;
+    this.dano = dano;
+    this.regen = regen;
+  }
+
+  isVivo(): boolean {
+    return this.vida > 0;
+  }
+  public abstract atacar(persona: Personagem): void;
+
+  sofrerAtaque(dano: number): void {
+    this.vida = this.vida - dano;
+  }
+  public recuperarVida(): void {
+    this.vida = this.vida + this.regen;
+    this.jaUsouCura = true;
+  }
+
+  public log(mensagem: string) {
+    console.log(mensagem);
+
+    document.getElementById("console")!.innerHTML += "<p>" + mensagem + "</p>";
+  }
+
+  public getVida(): number {
+    return this.vida;
+  }
+
+  public setVida(vida: number): void {
+    this.vida = vida;
+  }
+
+  gerarAtaque(): number {
+    let maximoAtk = 4;
+    return Math.floor(Math.random() * maximoAtk);
+  }
+
+  getimg() {
+    return this.imagem;
+  }
+
+  verificarAtaque(ataque: number): number {
+    let dano = 0;
+
+    if (ataque == 0) {
+      return 15;
+    } else if (ataque == 1) {
+      return 20;
+    } else {
+      return 30;
+    }
+  }
+
+  public podeCurar() {
+    return !this.jaUsouCura && this.vida < 50;
+  }
+}
